@@ -83,7 +83,7 @@
                <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="/">Home</a></li>
                   <li><a href="about">About Us</a></li>
-                  <li><a href="services">Services</a></li>
+                  <li><a href="location">Location</a></li>
                   <li><a href="gallery">Gallery</a></li>
                   <li><a href="testimonials">Testimonials</a></li>
                   <li><a href="contact">Contact Us</a></li>

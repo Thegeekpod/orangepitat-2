@@ -33,10 +33,13 @@ class IndexController extends Controller
 
     // service
 
-    public function services(){
-        return view("frontend.service.service");
+    public function location(){
+        return view("frontend.location.location");
     }
-    public function services_details(){
-        return view("frontend.service.servicedetails");
+    public function packages(){
+        return view("frontend.location.packages");
+    }
+    public function tour_packages_details(){
+        return view("frontend.location.tour-packages-details");
     }
 }

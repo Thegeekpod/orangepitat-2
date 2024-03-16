@@ -27,8 +27,10 @@ Route::get('/testimonials', [IndexController::class, 'testimonials'])->name('tes
 Route::get('/contact', [IndexController::class, 'contact'])->name('contact-us');
 Route::get('/about', [IndexController::class, 'about'])->name('about-us');
 //service
-Route::get('/services', [IndexController::class, 'services'])->name('services');
-Route::get('/services-details', [IndexController::class, 'services_details'])->name('services-details');
+Route::get('/location', [IndexController::class, 'location'])->name('location');
+Route::get('/packages', [IndexController::class, 'packages'])->name('packages');
+Route::get('/tour-packages-details', [IndexController::class, 'tour_packages_details'])->name('tour-packages-details');
+
 
 
 

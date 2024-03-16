@@ -1,7 +1,6 @@
 @extends("frontend.main.layout")
 @section("content")
-
- <div class="inner-banner">
+<div class="inner-banner">
          <div class="banner-caption">
             <h1>Explore The Worlds</h1>
             <h6>People Don’t Take, Trips Take People</h6>
@@ -66,7 +65,7 @@
                            <h4>10 Days</h4>
                         </div>
                      </li>
-                     <li>
+                    <!--  <li>
                         <div class="details-icon">
                            <i class="fa-solid fa-plane"></i>
                         </div>
@@ -74,7 +73,7 @@
                            <span>Tour Type</span>
                            <h4>Tent Camping</h4>
                         </div>
-                     </li>
+                     </li> -->
                   </ul>
                </div>
             </div>
@@ -235,56 +234,7 @@
                      </div>
                   </div>
                </div>
-               <div class="tour-information">
-                  <h3>Tour Information</h3>
-                  <div class="gowilds-single-max_guests">
-                     <div class="content-inner">
-                        <div class="icon">
-                           <i class="fa-solid fa-users"></i>               
-                        </div>
-                        <div class="box-content">
-                           <h4 class="ba-meta-title">Max Guests</h4>
-                           <div class="item-value">12</div>
-                        </div>
-                     </div>
-                  </div>
-
-                   <div class="gowilds-single-max_guests">
-                     <div class="content-inner">
-                        <div class="icon">
-                           <i class="fa-regular fa-circle-user"></i>              
-                        </div>
-                        <div class="box-content">
-                           <h4 class="ba-meta-title">Min Age</h4>
-                           <div class="item-value">12</div>
-                        </div>
-                     </div>
-                  </div>
-
-                   <div class="gowilds-single-max_guests">
-                     <div class="content-inner">
-                        <div class="icon">
-                          <i class="fa-solid fa-plane"></i>             
-                        </div>
-                        <div class="box-content">
-                           <h4 class="ba-meta-title">Tour Location</h4>
-                           <div class="item-value">12</div>
-                        </div>
-                     </div>
-                  </div>
-
-                   <div class="gowilds-single-max_guests">
-                     <div class="content-inner">
-                        <div class="icon">
-                           <i class="fa-solid fa-users"></i>               
-                        </div>
-                        <div class="box-content">
-                           <h4 class="ba-meta-title">Max Guests</h4>
-                           <div class="item-value">12</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               
             </div>
          </div>
       </div>
