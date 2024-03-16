@@ -12,7 +12,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}" type="text/css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
+      <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.default.min.css') }}" type="text/css">
       <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
       <link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

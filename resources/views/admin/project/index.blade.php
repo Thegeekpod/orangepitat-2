@@ -10,13 +10,13 @@
         <div class="app-card-header p-3">
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
-                    <h4 class="app-card-title">Project List</h4>
+                    <h4 class="app-card-title">Gallery List</h4>
                     @if (Session::has('msg'))
                         <p class="alert alert-info">{{ Session::get('msg') }}</p>
                     @endif
                 </div>
                 <div class="col-auto float-end">
-                    <a href="{{ route('projects.create') }}" class="btn btn-sm btn-success">Add project</a>
+                    <a href="{{ route('projects.create') }}" class="btn btn-sm btn-success">Add Gallery</a>
                 </div>
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\core\project\ProjectInterface;
 use App\Http\Controllers\Controller;
+use App\Models\ProjectImage;
 use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
@@ -15,10 +16,12 @@ class IndexController extends Controller
         $this->projectInterface  = $projectInterface;
     }
     public function index (){
-        return view("frontend.home.home");
+        $data['testimonials'] = Testimonials::get();
+        return view("frontend.home.home", $data);
     }
     public function gallery (){
-        return view("frontend.gallery.gallery");
+        $data['galleryImages'] = ProjectImage::get();
+        return view("frontend.gallery.gallery", $data);
     }
     public function testimonials (){
         $data['testimonials'] = Testimonials::get();

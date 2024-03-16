@@ -13,7 +13,7 @@
                             @method('POST')
                             @csrf
                             <div class="mb-3">
-                                <label for="setting-input-2" class="form-label">Project Name</label>
+                                <label for="setting-input-2" class="form-label">Gallery</label>
                                 <input type="text" name="name" class="form-control" id="setting-input-2" required>
                             </div>
                             <div id="image-all">
