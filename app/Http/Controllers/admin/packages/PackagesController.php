@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin\packages;
 
 use App\Http\Controllers\Controller;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class PackagesController extends Controller
@@ -20,7 +21,9 @@ class PackagesController extends Controller
      */
     public function create()
     {
-        //
+        $data['locations'] = Location::all(array('id', 'title'));
+        // dd($data['locations']);
+        return view("admin.packages.create" , $data);
     }
 
     /**

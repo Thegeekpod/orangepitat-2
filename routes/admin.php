@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\location\LocationController;
+use App\Http\Controllers\admin\packages\PackagesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\Auth\AuthController;
 use App\Http\Controllers\admin\project\ProjectController;
@@ -23,6 +24,7 @@ Route::post('/locationstore', [LocationController::class,'store'])->name('locati
 Route::put('/locations/{id}',  [LocationController::class,'update'])->name('locations.update');
 Route::delete('locations/{slug}', [LocationController::class,'destroy'])->name('locations.destroy');
 
+Route::get('/packages/create',[PackagesController::class,'create'])->name('package.create');
 
 Route::get('log-out', [AuthController::class, 'adminLogout'])->name('admin.logout');
 

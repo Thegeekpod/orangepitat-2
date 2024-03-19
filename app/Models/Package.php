@@ -5,12 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Location extends Model
+class Package extends Model
 {
-    use HasFactory,Sluggable;
+    use HasFactory,Sluggable,SoftDeletes;
 
-    protected $fillable = ['title', 'image', 'slug','location',];
+    protected $fillable = [
+        'location_id',
+        'name',
+        'price',
+        'duration',
+        'address',
+        'description',
+        'included',
+        'excluded',
+        'slug'
+    ];
 
     public function sluggable(): array
     {
