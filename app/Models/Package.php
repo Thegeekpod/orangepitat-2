@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Package extends Model
 {
-    use HasFactory,Sluggable,SoftDeletes;
+    use HasFactory, Sluggable, SoftDeletes;
 
     protected $fillable = [
         'location_id',
@@ -20,15 +20,21 @@ class Package extends Model
         'description',
         'included',
         'excluded',
-        'slug'
+        'slug',
+        'image'
     ];
 
     public function sluggable(): array
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'name'
             ]
         ];
+    }
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class, 'location_id');
     }
 }

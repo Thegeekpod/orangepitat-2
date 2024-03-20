@@ -72,19 +72,21 @@
         </div>
         <div class="row" data-aos="fade-up" data-aos-duration="3000">
             <div id="Packages" class="owl-carousel owl-theme">
+                @foreach ($locations as $item)
                 <div class="item">
                     <div class="packages-box">
                         <div class="packages-box-images">
-                            <img src="{{ asset('frontend/images/packages-1.png') }}">
+                            <img src="{{ asset($item->image) }}">
                         </div>
-                        <h5>The Best of BANGKOK – PATTAYA</h5>
+                        <h5>{{$item->title}}</h5>
                         <ul class="packages-action">
-                            <li><i class="fa-solid fa-location-dot"></i><span> Thailand</span></li>
-                            <li><a href="#" class="packages-btn">View Packages</a></li>
+                            <li><i class="fa-solid fa-location-dot"></i><span> {{$item->title}}</span></li>
+                            <li><a href="{{route('packages',['slug' => $item->slug ])}}" class="packages-btn">View Packages</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="item">
+                @endforeach
+                {{-- <div class="item">
                     <div class="packages-box">
                         <div class="packages-box-images">
                             <img src="{{ asset('frontend/images/packages-2.png') }}">
@@ -107,7 +109,7 @@
                             <li><a href="#" class="packages-btn">View Packages</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -297,11 +299,6 @@
                             @endforeach
                     </div>
                 </div>
-
-
-
-
-
             </div>
         </div>
     </section>

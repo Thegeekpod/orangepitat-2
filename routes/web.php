@@ -28,8 +28,8 @@ Route::get('/contact', [IndexController::class, 'contact'])->name('contact-us');
 Route::get('/about', [IndexController::class, 'about'])->name('about-us');
 //service
 Route::get('/location', [IndexController::class, 'location'])->name('location');
-Route::get('/packages', [IndexController::class, 'packages'])->name('packages');
-Route::get('/tour-packages-details', [IndexController::class, 'tour_packages_details'])->name('tour-packages-details');
+Route::get('/packages/{slug}', [IndexController::class, 'packages'])->name('packages');
+Route::get('/tour-packages-details/{slug}', [IndexController::class, 'tour_packages_details'])->name('tour-packages-details');
 
 
 

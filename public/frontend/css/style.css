@@ -2003,3 +2003,8 @@ background: #ef7534;
     .gowilds-single-max_guests{
         margin-top: 20px;
     }
+
+    .form-control.editor {
+        height: 300px; /* Adjust the height as needed */
+        width: 100%; /* Ensures the editor spans the full width */
+    }

@@ -25,6 +25,11 @@ Route::put('/locations/{id}',  [LocationController::class,'update'])->name('loca
 Route::delete('locations/{slug}', [LocationController::class,'destroy'])->name('locations.destroy');
 
 Route::get('/packages/create',[PackagesController::class,'create'])->name('package.create');
+Route::post('/packages/store',[PackagesController::class,'store'])->name('package.store');
+Route::get('/packages',[PackagesController::class,'index'])->name('package.index');
+Route::get('/packages/edit/{id}',[PackagesController::class,'edit'])->name('package.edit');
+Route::post('/packages/update/{id}',[PackagesController::class,'update'])->name('package.update');
+Route::delete('packages/{id}', [PackagesController::class,'destroy'])->name('package.destroy');
 
 Route::get('log-out', [AuthController::class, 'adminLogout'])->name('admin.logout');
 

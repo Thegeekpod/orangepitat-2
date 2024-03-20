@@ -38,11 +38,11 @@
             <div class="row">
                <div class="col-md-6">
                   <h1 class="post-title">
-                     Cottages In The Middle Of Beach
+                     {{$package->name}}
                   </h1>
                   <div class="gowilds-single-address">
                      <i class="fa-solid fa-location-dot"></i>
-                     <span>Main Street, Brooklyn, NY</span>
+                     <span>{{$package->location->location}}</span>
                   </div>
                </div>
                <div class="col-md-6">
@@ -53,7 +53,7 @@
                         </div>
                         <div class="details-box-content">
                            <span>Price</span>
-                           <h4>109.00</h4>
+                           <h4>{{$package->price}}</h4>
                         </div>
                      </li>
                      <li>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="details-box-content">
                            <span>Duration</span>
-                           <h4>10 Days</h4>
+                           <h4>{{$package->duration}}</h4>
                         </div>
                      </li>
                     <!--  <li>
@@ -83,7 +83,8 @@
          <div class="row">
             <div class="col-md-8">
                <div class="tour-details">
-                  <h1>Explore Tours</h1>
+                  {!! $package->description !!}
+                  {{-- <h1>Explore Tours</h1>
                   <p>Sed ut perspiciatis unde omniste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ip quae abillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.</p>
                   <div class="row facilities">
                      <div class="col-md-6">
@@ -95,24 +96,26 @@
                      <div class="col-md-6">
                         <img src="{{asset('frontend/images/gallery-04.jpg')}}">
                      </div>
-                  </div>
+                  </div> --}}
                   <div class="row included-exclude">
                      <div class="col-md-6">
                         <h3>Included</h3>
                         <ul>
-                           <li><i class="fa-solid fa-check"></i> <span>Pick and Drop Services</span></li>
+                           {!! $package->included !!}
+                           {{-- <li><i class="fa-solid fa-check"></i> <span>Pick and Drop Services</span></li>
                            <li><i class="fa-solid fa-check"></i> <span>1 Meal Per Day</span></li>
                            <li><i class="fa-solid fa-check"></i> <span>Cruise Dinner & Music Event</span></li>
-                           <li><i class="fa-solid fa-check"></i> <span>Visit 7 Best Places in the City With Group</span></li>
+                           <li><i class="fa-solid fa-check"></i> <span>Visit 7 Best Places in the City With Group</span></li> --}}
                         </ul>
                      </div>
                      <div class="col-md-6">
                         <h3>exclude</h3>
                         <ul>
-                           <li><i class="fa-solid fa-xmark"></i> <span>Pick and Drop Services</span></li>
+                           {!! $package->excluded !!}
+                           {{-- <li><i class="fa-solid fa-xmark"></i> <span>Pick and Drop Services</span></li>
                            <li><i class="fa-solid fa-xmark"></i> <span>1 Meal Per Day</span></li>
                            <li><i class="fa-solid fa-xmark"></i> <span>Cruise Dinner & Music Event</span></li>
-                           <li><i class="fa-solid fa-xmark"></i> <span>Visit 7 Best Places in the City With Group</span></li>
+                           <li><i class="fa-solid fa-xmark"></i> <span>Visit 7 Best Places in the City With Group</span></li> --}}
                         </ul>
                      </div>
                   </div>
