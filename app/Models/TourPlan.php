@@ -16,4 +16,8 @@ class TourPlan extends Model
         'plan_name',
         'plan_details',
     ];
+
+    public function package(){
+        return  $this->belongsTo(Package::class,'package_id','id');
+    }
 }

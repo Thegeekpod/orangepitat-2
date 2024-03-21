@@ -13,7 +13,7 @@
                 <h4 class="app-card-title">Package List</h4>
             </div>
             <div class="col-auto float-end">
-                <a href="{{ route('package.create') }}" class="btn btn-sm btn-success">Add Package</a>
+                <a href="{{ route('day.add',['id' => $package_id]) }}" class="btn btn-sm btn-success">Add Plan</a>
             </div>
         </div>
     </div>
@@ -29,34 +29,28 @@
                 <thead>
                     <tr>
                         <th class="meta">ID</th>
-                        <th class="meta">Location  Name</th>
                         <th class="meta">Package Name</th>
-                        <th class="meta">Price</th>
-                        <th class="meta">Image</th>
+                        <th class="meta">Plan Name</th>
+                        <th class="meta">Plan Details</th>
                         <th class="meta">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($packages as $package)
+                    @foreach($plans as $plan)
                     <tr>
-                        <td>{{ $package->id }}</td>
-                        <td>{{ $package->location->title }}</td>
-                        <td>{{ $package->name }}</td>
-                        <td>{{ $package->price }}</td>
-                        <td>
-                            <img height="103" width="127" src="{{ asset($package->image) }}" alt="">
-                        </td>
+                        <td>{{  $plan->id }}</td>
+                        <td>{{  $plan->package->name }}</td>
+                        <td>{{  $plan->plan_name }}</td>
+                        <td>{{  $plan->plan_details }}</td>
                         <td class="action-icons">
-                            <a href="{{ route('package.edit', $package->id) }}" class="m-3">
+                            <a href="{{ route('day.edit',  $plan->id) }}" class="m-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                                 </svg>
                             </a>
-
-                            <a href="{{route('tour.plans',['id' => $package->id ])}}">Tour Plan</a>
                             
-                            <form method="POST" action="{{ route('package.destroy', $package->id) }}" class="action-icon delete-form">
+                            {{-- <form method="POST" action="{{ route('package.destroy',  $plan->id) }}" class="action-icon delete-form">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-outline-danger btn-xs delete-icon show_confirm" data-toggle="tooltip" title='Delete'>
@@ -65,7 +59,7 @@
                                         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                                     </svg>
                                 </button>
-                            </form>
+                            </form> --}}
                         </td>
                     </tr>
                     @endforeach

@@ -31,6 +31,12 @@ Route::get('/packages/edit/{id}',[PackagesController::class,'edit'])->name('pack
 Route::post('/packages/update/{id}',[PackagesController::class,'update'])->name('package.update');
 Route::delete('packages/{id}', [PackagesController::class,'destroy'])->name('package.destroy');
 
+Route::get('/day/add/{id}',[PackagesController::class,'day_add'])->name('day.add');
+Route::post('/day/store',[PackagesController::class,'day_store'])->name('day.store');
+Route::get('/day/edit/{plan_id}',[PackagesController::class,'day_edit'])->name('day.edit');
+Route::post('/day/update/{plan_id}',[PackagesController::class,'day_update'])->name('day.update');
+Route::get('/tour/plans/{id}',[PackagesController::class,'tour_plans'])->name('tour.plans');
+
 Route::get('log-out', [AuthController::class, 'adminLogout'])->name('admin.logout');
 
 });
