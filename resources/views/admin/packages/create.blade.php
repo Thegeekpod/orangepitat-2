@@ -42,11 +42,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="location" class="form-label">Included</label>
-                   <textarea name="included" rows="15" class="form-control editor"></textarea>
+                   <textarea name="included" rows="15" class="form-control editor1"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="location" class="form-label">Excluded</label>
-                   <textarea name="excluded" rows="15" class="form-control editor"></textarea>
+                   <textarea name="excluded" rows="15" class="form-control editor2"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Image</label>

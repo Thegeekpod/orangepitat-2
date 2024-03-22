@@ -30,6 +30,7 @@ Route::get('/about', [IndexController::class, 'about'])->name('about-us');
 Route::get('/location', [IndexController::class, 'location'])->name('location');
 Route::get('/packages/{slug}', [IndexController::class, 'packages'])->name('packages');
 Route::get('/tour-packages-details/{slug}', [IndexController::class, 'tour_packages_details'])->name('tour-packages-details');
+Route::post('/booking',[IndexController::class,'storeBooking'])->name('storeBooking');
 
 
 
