@@ -29,25 +29,25 @@ class LocationController extends Controller
        ]);
    
        // Generate a base slug from the title
-       $baseSlug = Str::slug($validatedData['title']);
+    //    $baseSlug = Str::slug($validatedData['title']);
    
        // Check if the base slug already exists
-       $count = Location::where('slug', $baseSlug)->count();
-       $slug = $baseSlug;
-       $i = 1;
+    //    $count = Location::where('slug', $baseSlug)->count();
+    //    $slug = $baseSlug;
+    //    $i = 1;
    
        // If the base slug already exists, append a number to it
-       while ($count > 0) {
-           $slug = $baseSlug . '-' . $i;
-           $count = Location::where('slug', $slug)->count();
-           $i++;
-       }
+    //    while ($count > 0) {
+    //        $slug = $baseSlug . '-' . $i;
+    //        $count = Location::where('slug', $slug)->count();
+    //        $i++;
+    //    }
    
        // Process and save the data
        $location = new Location;
        $location->title = $validatedData['title'];
        $location->location = $validatedData['location'];
-       $location->slug = $slug;
+    //    $location->slug = $slug;
        // Handle image upload
        if ($request->hasFile('image')) {
            $image = $request->file('image');
